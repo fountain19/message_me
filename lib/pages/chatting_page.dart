@@ -312,7 +312,7 @@ var listMessage;
   }
  bool isLastMsgLeft(int index)
   {
-    if((index>0 && listMessage!=null && listMessage[index-1]['idForm']==id )|| index==0)
+    if((index>0 && listMessage!=null && listMessage[index-1]['idFrom']==id )|| index==0)
     {
       return true;
     }else
@@ -323,7 +323,7 @@ var listMessage;
 
  bool isLastMsgRight(int index)
   {
-    if((index>0 && listMessage!=null && listMessage[index-1]['idForm']!=id )|| index==0)
+    if((index>0 && listMessage!=null && listMessage[index-1]['idFrom']!=id )|| index==0)
       {
         return true;
       }else
@@ -334,7 +334,7 @@ var listMessage;
 
   Widget createItem(int index,DocumentSnapshot document)
   {  //My messages - right side
-    if(document['idForm']==id)
+    if(document['idFrom']==id)
       {
          return Row(
            children: [
@@ -606,7 +606,7 @@ var listMessage;
          {
            await transaction.set(docRef,
                {
-                 'idForm':id,
+                 'idFrom':id,
                  'idTo':receiverId,
                  'timeStamp':DateTime.now().millisecondsSinceEpoch.toString(),
                  'content':contentMsg,

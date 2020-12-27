@@ -133,6 +133,8 @@ class _LoginPageState extends State<LoginPage> {
           'aboutMe': 'Available',
           'createdAt': DateTime.now().toString(),
           'chattingWith': null,
+          'pushToken':null
+
         });
         //after set fireStore we will set data locale
         currentUser = firebaseUser;

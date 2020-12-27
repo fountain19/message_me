@@ -38,9 +38,10 @@ dependencies:
   firebase_storage: ^3.0.6
   cached_network_image:
   intl:
-  firebase_messaging:
   flutter_local_notifications:
   flutter_launcher_icons: "^0.8.0"
+  firebase_messaging: ^6.0.13
+
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +77,7 @@ flutter:
     - images/9.gif
     - images/10.gif
     - images/error.png
+    - images/app_icon.png
   fonts:
     - family: Lobster
       fonts:
